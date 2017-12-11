@@ -21,10 +21,12 @@ function Word(terms){
     };
 
     this.wordFound = function() {
-        this.found = this.letter.every(function(currentLet) {
-            return currentLet.appear;
-        });
-        return this.found;
+        if(this.letters.every(function(let){
+            return let.appear === true;
+          })){
+            this.charFound = true;
+            return true;
+          }
     };
 
     //create function to check if user input existing letter correctly for their guess word
@@ -44,7 +46,21 @@ function Word(terms){
    
 
     //create function that render word base on letter found
+    this.wordRender = function(){
+        var displayLet = '';
+        //render word base on letter found
+        that.letters.forEach(function(let){
+            var currentLet = let.letterRender();
+            displayLet += currentLet;
+        });
 
+        return displayLet;
+    };
 
 
 }
+
+
+// export for main.js to use
+
+module.exports = Word;
