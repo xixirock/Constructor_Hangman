@@ -29,3 +29,6 @@ var letter = function(let){
     };
 };
 
+//export to word.js
+module.exports = Letter;
+
