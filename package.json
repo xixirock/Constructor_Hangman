@@ -1,0 +1,23 @@
+{
+  "name": "constructor_hangman",
+  "version": "1.0.0",
+  "description": "Using Constructor to create Hangman Game, Subject around Game Title",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xixirock/Constructor_Hangman.git"
+  },
+  "author": "Jason Lin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/xixirock/Constructor_Hangman/issues"
+  },
+  "homepage": "https://github.com/xixirock/Constructor_Hangman#readme",
+  "dependencies": {
+    "inquirer": "^4.0.1",
+    "is-letter": "^1.1.1"
+  }
+}
