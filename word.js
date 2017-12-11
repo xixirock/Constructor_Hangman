@@ -2,7 +2,7 @@
 // This should contain word specific logic and data.
 
 //require letter.js for this
-var letter = require('./letter.js');
+var Letter = require('./letter.js');
 
 function Word(terms){
     var that = this;
