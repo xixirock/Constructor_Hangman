@@ -20,11 +20,31 @@ function Word(terms){
         }
     };
 
+    this.wordFound = function() {
+        this.found = this.letter.every(function(currentLet) {
+            return currentLet.appear;
+        });
+        return this.found;
+    };
+
     //create function to check if user input existing letter correctly for their guess word
-    //shown letter in replace of _ if guess correct
+    this.checkLetInWord =function (guessedLet){
+        var returnLet = 0;
+        //shown letter in replace of _ if guess correct
+        this.letters.forEach(function(let){
+            if(let.letter === guessedLet){
+                let.appear = true;
+                returnLet++;
+            }
+        })
+        //letter will be shown if guess correct
+        return returnLet;
+    };
+
+   
 
     //create function that render word base on letter found
 
-    
+
 
 }
